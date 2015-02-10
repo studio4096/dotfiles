@@ -6,7 +6,7 @@ use Cwd;
 
 my $username = 'studio4096';
 my $project = 'dotfiles';
-my $repo_url = "git\@github.com:${username}/${project}.git";
+my $repo_url = "https://github.com/${username}/${project}.git";
 my $tar_url = "https://github.com/${username}/${project}/tarball/master";
                
 my @exclude_files = qw( README.md bootstrap.pl LICENSE-MIT.txt );
