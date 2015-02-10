@@ -1,0 +1,23 @@
+[alias]
+  ap = add --patch
+  co = checkout
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = auto
+[merge]
+  tool = vimdiff
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+[apply]
+  whitespace = nowarn
+[format]
+  pretty = %C(yellow)%h%Creset %s %C(red)(%cr)%Creset
+[push]
+  default = current
+[include]
+  path = .gitconfig.local
+[commit]
+  template = ~/.gitmessage

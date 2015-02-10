@@ -1,0 +1,16 @@
+# JDK7
+#cask install java7
+
+# optional
+#cask install eclipse-java
+#cask install sublime-text
+#cask install dropbox
+#cask install evernote
+
+# candidates:
+#cask install google-chrome
+#cask install eclipse-jee
+#cask install eclipse-ide
+#cask install opera
+#cask install opera-mobile-emulator
+#cask install geektool
