@@ -14,7 +14,7 @@ and etc..
 ## Installation
 
 ```
-curl -fsSL https://raw.github.com/studio4096/dotfiles/bootstrap.pl | perl -
+curl -fsSL https://raw.githubusercontent.com/studio4096/dotfiles/master/bootstrap.pl | perl -
 ```
 
 ### Options
@@ -32,10 +32,12 @@ Available options.
 
 ex.
 ```
-curl -fsSL https://raw.github.com/studio4096/dotfiles/bootstrap.pl | perl - --prefix ~/team/dotfiles --js
+curl -fsSL https://raw.githubusercontent.com/studio4096/dotfiles/master/bootstrap.pl | perl - --prefix ~/team/dotfiles --js
 ```
 
 ## Uninstallation
+
+未実装。
 
 他のパッケージ群は個別にお願いします
 

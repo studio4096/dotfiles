@@ -29,7 +29,7 @@ do
 done
 shift $(($OPTIND - 1))
 OPTIND=$OPTIND_OLD
-
+[[ -n "$prefix" ]] || prefix=$HOME/studio4096/dotfiles
 
 if [[ "$OSTYPE" =~ ^darwin ]]; then
     echo "OSTYPE is $OSTYPE "
@@ -222,9 +222,8 @@ fi
 
 # TODO $HOME以下にしか対応していない(prefixも同様。)
 mkdir -p $HOME/bin
-[[ -n "$prefix" ]] || prefix=$HOME/studio4096/dotfiles
 (
-    cd 
+    cd $HOME
     for f in $(cat << 'EOF'
 .aliases
 .bash_profile
