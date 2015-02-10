@@ -231,7 +231,6 @@ mkdir -p $HOME/bin
 .gitconfig
 .gitignore
 .gitmessage
-.tmux.conf
 .zshenv
 .zshrc
 Brewfile
