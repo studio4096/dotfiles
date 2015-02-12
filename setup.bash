@@ -207,9 +207,8 @@ EOF
 if [[ "$OSTYPE" =~ ^darwin ]]; then
 
     install_xcode_clt
-    install_homebrew
-    modified_etc_paths
-    bundle_brewfile
+    in_array arr_opt_feature homebrew         && { install_homebrew; modified_etc_paths; }
+    in_array arr_opt_feature brewfile     && bundle_brewfile
     in_array arr_opt_feature js           && bash $CURRENT/bin/setup_frontend_env.bash
     in_array arr_opt_feature osx_defaults && bash $CURRENT/bin/setup_osx_defaults.bash
     in_array arr_opt_feature php          && bash $CURRENT/bin/setup_php_env.bash

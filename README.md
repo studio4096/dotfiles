@@ -1,5 +1,7 @@
 # studio4096 team dotfiles
 
+Note: Still in development
+
 ## What's in it?
 
 - X Code Command Line Tools installation
@@ -22,6 +24,8 @@ curl -fsSL https://raw.githubusercontent.com/studio4096/dotfiles/master/bootstra
 Available options.
 
 - prefix : checkout directory.
+- no-homebrew : without Homebrew.
+- no-brewfile : without Brewfile installation.
 - osx_defaults : with .
 - zsh : with zsh.
 - js : with frontend deveropment env.
