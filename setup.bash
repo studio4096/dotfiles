@@ -135,7 +135,21 @@ function install_homebrew () {
     sudo chmod g+w $brew_prefix
 
     # install home brew
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    #ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+    # BrewfileがHomebrewのデフォルトでは無くなったので
+    # rcmdnkさんのbrew-fileを使う
+    # gitリポジトリとも連携できるけど使わない
+    #brew install rcmdnk/file/brew-file
+    # 現状をリストアップする場合
+    # # brew file init
+    # cask可能なappのリストアップ。TODO python のエラー出るけどよくわからじ...
+    # # brew file casklist
+    # リポジトリ
+    # # brew file pull
+    # # brew file push
+    # 一括でinstall
+    curl -fsSL https://raw.github.com/rcmdnk/homebrew-file/install/install.sh |sh
 }
 
 function modified_etc_paths() {
@@ -165,20 +179,8 @@ EOF
 
 function bundle_brewfile () {
     echo_separator 'Bundle Homebrew formula'
-    # BrewfileがHomebrewのデフォルトでは無くなったので
-    # rcmdnkさんのbrew-fileを使う
-    # gitリポジトリとも連携できる
-    brew install rcmdnk/file/brew-file
-    # 現状をリストアップする場合
-    # # brew file init
-    # cask可能なappのリストアップ。TODO python のエラー出るけどよくわからじ...
-    # # brew file casklist
-
 
     brew file install -f $HOME/Brewfile
-    # リポジトリ
-    # # brew file pull
-    # # brew file push
     source $HOME/.bash_profile
     # bundle Brewfile.local
     if [ -f $HOMEBREW_BREWFILE ]; then
