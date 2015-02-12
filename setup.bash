@@ -58,7 +58,7 @@ function notify() {
     local msg=$1; shift
     local subtitle=$1; shift
     local title=$1; shift
-    [[ "$OSTYPE" =~ ^darwin ]]&& return
+    [[ "$OSTYPE" =~ ^darwin ]]|| return
     [[ $osx_major_version -lt 10 ]]&&[[ $osx_minor_version -lt 9 ]]&& return
 
     [[ -z "$title" ]]&& title=Terminal
