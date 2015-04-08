@@ -1,4 +1,7 @@
 export PATH=~/bin:$PATH
+export NODEBREW_ROOT=$(brew --prefix)/var/nodebrew
+[ -d $NODEBREW_ROOT/current ] && export PATH=$NODEBREW_ROOT/current/bin:$PATH
+
 # LC_ALLがja_JP.UTF-8になっていない場合、wineで起動する環境も英語ロケールになってしまうため、日本語ロケールを設定する。
 export LC_ALL=ja_JP.UTF-8
 

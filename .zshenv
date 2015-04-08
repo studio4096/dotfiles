@@ -3,6 +3,8 @@ if [ -x /usr/libexec/path_helper ]; then
 	eval `/usr/libexec/path_helper -s`
 fi
 export PATH=~/bin:$PATH
+export NODEBREW_ROOT=$(brew --prefix)/var/nodebrew
+[ -d $NODEBREW_ROOT/current ] && export PATH=$NODEBREW_ROOT/current/bin:$PATH
 
 export LANG=ja_JP.UTF-8
 
@@ -18,5 +20,4 @@ if [[ "$OSTYPE" =~ ^darwin ]]; then
     # for java
     export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
 fi
-
 

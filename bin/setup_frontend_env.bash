@@ -1,5 +1,11 @@
 ## --- for node.js ------------------------------
 
+#nodebrew install-binary stable
+#nodebrew use stable
+nodebrew install-binary v0.10.x
+nodebrew use v0.10.x
+
+
 # global npm
 # candidate:
 #    less
@@ -8,7 +14,6 @@
 #    coffee-script
 #    webpack
 for f in $(cat << 'EOF'
-nave
 yo
 bower
 grunt-cli
@@ -24,7 +29,7 @@ done
 npm cache clean
 
 # use stable node.js
-nave use stable
+#nave use stable
 
 # npm WARN Building the local index for the first time, please be patient
 

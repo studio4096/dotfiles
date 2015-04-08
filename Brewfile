@@ -31,7 +31,7 @@ install gitignore
 #$ joe java node osx > .gitignore    # saves a new .gitignore file for multiple languages
 
 # programming language
-install node
+install nodebrew
 
 # databases
 install mysql
