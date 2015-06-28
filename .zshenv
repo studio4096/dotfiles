@@ -7,6 +7,7 @@ export NODEBREW_ROOT=$(brew --prefix)/var/nodebrew
 [ -d $NODEBREW_ROOT/current ] && export PATH=$NODEBREW_ROOT/current/bin:$PATH
 
 export LANG=ja_JP.UTF-8
+export NODE_ENV=development
 
 typeset -U path PATH
 if [[ "$OSTYPE" =~ ^darwin ]]; then
